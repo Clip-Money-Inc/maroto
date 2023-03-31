@@ -4,12 +4,12 @@ import (
 	"bytes"
 	"time"
 
-	"github.com/johnfercher/maroto/internal/fpdf"
-	"github.com/johnfercher/maroto/pkg/color"
+	"github.com/Clip-Money-Inc/maroto/internal/fpdf"
+	"github.com/Clip-Money-Inc/maroto/pkg/color"
 
-	"github.com/johnfercher/maroto/internal"
-	"github.com/johnfercher/maroto/pkg/consts"
-	"github.com/johnfercher/maroto/pkg/props"
+	"github.com/Clip-Money-Inc/maroto/internal"
+	"github.com/Clip-Money-Inc/maroto/pkg/consts"
+	"github.com/Clip-Money-Inc/maroto/pkg/props"
 	"github.com/jung-kurt/gofpdf"
 )
 
@@ -63,6 +63,7 @@ type Maroto interface {
 
 	// Fonts
 	AddUTF8Font(familyStr string, styleStr consts.Style, fileStr string)
+	AddUTF8FontFromBytes(familyStr string, styleStr consts.Style, utf8Bytes []byte)
 	SetFontLocation(fontDirStr string)
 	SetDefaultFontFamily(fontFamily string)
 	GetDefaultFontFamily() string
@@ -585,6 +586,11 @@ func (s *PdfMaroto) Output() (bytes.Buffer, error) {
 // styleStr is the style of the font and fileStr is the path to the .ttf file.
 func (s *PdfMaroto) AddUTF8Font(familyStr string, styleStr consts.Style, fileStr string) {
 	s.Pdf.AddUTF8Font(familyStr, string(styleStr), fileStr)
+}
+
+// AddUTF8FontFromBytes adds a custom utf8 font using the provided bytes
+func (s *PdfMaroto) AddUTF8FontFromBytes(familyStr string, styleStr consts.Style, utf8Bytes []byte) {
+	s.Pdf.AddUTF8FontFromBytes(familyStr, string(styleStr), utf8Bytes)
 }
 
 // SetFontLocation allows you to change the fonts lookup location.  fontDirStr is an absolute path where the fonts should be located.

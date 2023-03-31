@@ -5,10 +5,10 @@ import (
 	"encoding/base64"
 	"errors"
 
+	"github.com/Clip-Money-Inc/maroto/internal/fpdf"
+	"github.com/Clip-Money-Inc/maroto/pkg/consts"
+	"github.com/Clip-Money-Inc/maroto/pkg/props"
 	"github.com/google/uuid"
-	"github.com/johnfercher/maroto/internal/fpdf"
-	"github.com/johnfercher/maroto/pkg/consts"
-	"github.com/johnfercher/maroto/pkg/props"
 	"github.com/jung-kurt/gofpdf"
 )
 

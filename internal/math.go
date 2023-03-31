@@ -1,8 +1,8 @@
 package internal
 
 import (
-	"github.com/johnfercher/maroto/internal/fpdf"
-	"github.com/johnfercher/maroto/pkg/props"
+	"github.com/Clip-Money-Inc/maroto/internal/fpdf"
+	"github.com/Clip-Money-Inc/maroto/pkg/props"
 )
 
 const (

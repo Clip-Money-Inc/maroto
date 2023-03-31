@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/johnfercher/maroto/internal"
-	"github.com/johnfercher/maroto/internal/mocks"
-	"github.com/johnfercher/maroto/pkg/color"
-	"github.com/johnfercher/maroto/pkg/consts"
-	"github.com/johnfercher/maroto/pkg/props"
+	"github.com/Clip-Money-Inc/maroto/internal"
+	"github.com/Clip-Money-Inc/maroto/internal/mocks"
+	"github.com/Clip-Money-Inc/maroto/pkg/color"
+	"github.com/Clip-Money-Inc/maroto/pkg/consts"
+	"github.com/Clip-Money-Inc/maroto/pkg/props"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 )
